@@ -1,0 +1,39 @@
+:root{--bg1:#f9a8d4;--bg2:#7c3aed;--bg3:#fb923c;--muted:#9ca3af}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial}
+.insta-theme{background:linear-gradient(135deg,var(--bg2),#ec4899 40%, var(--bg3));min-height:100vh;color:#111}
+.container{max-width:980px;margin:0 auto;padding:20px}
+.insta-header{padding:14px 0}
+.header-row{display:flex;justify-content:space-between;align-items:center}
+.brand{font-weight:700;color:white;font-size:1.1rem}
+.header-actions .icon{background:transparent;border:0;font-size:18px;margin-left:10px;color:white}
+
+.insta-btn{background:rgba(255,255,255,0.12);color:#fff;padding:6px 10px;border-radius:999px;text-decoration:none;font-weight:600;margin-right:10px}
+.insta-btn:hover{background:rgba(255,255,255,0.18)}
+
+.actions-right{display:flex;gap:8px;align-items:center}
+.insta-link{background:transparent;color:#fff;border:1px solid rgba(255,255,255,0.16);padding:6px 10px;border-radius:8px;text-decoration:none;font-weight:600}
+.insta-link:hover{background:rgba(255,255,255,0.06)}
+
+.profile-wrap{background:transparent;padding:18px}
+.profile-card{display:flex;gap:18px;align-items:center;background:rgba(255,255,255,0.08);padding:16px;border-radius:12px}
+.avatar{width:120px;height:120px;border-radius:50%;object-fit:cover;border:4px solid rgba(255,255,255,0.12)}
+.profile-meta{flex:1;color:#fff}
+.username{margin:0;font-size:1.4rem}
+.row{display:flex;align-items:center;justify-content:space-between}
+.follow{background:#fff;color:#111;padding:8px 12px;border-radius:8px;border:0;font-weight:600}
+.stats{display:flex;gap:18px;margin-top:8px}
+.stats div{color:rgba(255,255,255,0.95)}
+.stats span{display:block;color:var(--muted);font-size:0.9rem}
+.bio{margin-top:10px;color:rgba(255,255,255,0.95)}
+
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:18px}
+.tile{background-size:cover;background-position:center;padding-bottom:100%;border-radius:6px}
+
+.insta-footer{padding:18px 0;color:rgba(255,255,255,0.9);text-align:center}
+
+@media (max-width:720px){
+  .profile-card{flex-direction:column;align-items:flex-start}
+  .avatar{width:96px;height:96px}
+  .grid{grid-template-columns:repeat(2,1fr)}
+}
