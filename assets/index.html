@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Instagram Follow Page</title>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background: #63666a;
+        font-family: Arial, Helvetica, sans-serif;
+        overflow-x: hidden;
+        color: white;
+    }
+
+    .heart {
+        position: absolute;
+        color: #ff4f79;
+        font-size: 20px;
+        animation: float 6s linear infinite;
+        opacity: 0.7;
+    }
+
+    @keyframes float {
+        0% { transform: translateY(0) scale(1); opacity: 0.7; }
+        100% { transform: translateY(-800px) scale(1.5); opacity: 0; }
+    }
+
+    .container {
+        width: 60%;
+        margin: 140px auto;
+        background: rgba(255,255,255,0.1);
+        padding: 40px;
+        border-radius: 18px;
+        text-align: center;
+        box-shadow: 0 0 30px rgba(0,0,0,0.3);
+        backdrop-filter: blur(6px);
+    }
+
+    .insta-icon {
+        font-size: 60px;
+        color: #ff2e83;
+        margin-bottom: 20px;
+    }
+
+    h1 {
+        font-size: 32px;
+        font-weight: 600;
+    }
+
+    .username {
+        color: #ff2e83;
+        font-weight: bold;
+    }
+
+    .btn {
+        margin-top: 30px;
+        padding: 14px 32px;
+        background: #8a2be2;
+        border-radius: 25px;
+        display: inline-flex;
+        align-items: center;
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: 600;
+        transition: 0.2s;
+    }
+
+    .btn:hover {
+        transform: scale(1.05);
+        background: #7c26cf;
+    }
+
+    .note {
+        margin-top: 25px;
+        font-size: 15px;
+        opacity: 0.9;
+    }
+</style>
+</head>
+<body>
+
+<script>
+    function createHeart() {
+        const heart = document.createElement("div");
+        heart.className = "heart";
+        heart.innerHTML = "❤";
+        heart.style.left = Math.random() * window.innerWidth + "px";
+        heart.style.top = "100vh";
+        heart.style.animationDuration = 4 + Math.random() * 4 + "s";
+        document.body.appendChild(heart);
+
+        setTimeout(() => heart.remove(), 8000);
+    }
+    setInterval(createHeart, 500);
+</script>
+
+<div class="container">
+    <div class="insta-icon">📷</div>
+
+    <h1>Follow <span class="username">@noise_ysilent</span> on Instagram</h1>
+
+    <a class="btn" href="https://instagram.com/noise_ysilent" target="_blank">
+        📷 Open Instagram
+    </a>
+
+    <div class="note">
+        📢 Share this link with your friends to help me reach 20k followers!
+    </div>
+</div>
+
+</body>
+</html>
